@@ -1,0 +1,55 @@
+<html lang="nl">
+    <head>
+        <meta http-equiv="content-type"
+              content="text/html;
+              charset=utf-8">
+        <title> Bereken totaalbedrag</title>
+        <style>
+            #border{
+                width: 17em;
+                height: 10em;
+                background-color: green;
+                color: white;
+                padding-left: 0.5em;
+            }
+            button{
+                background-color: black;
+                color: white;
+                padding: 0.3em;
+            }
+            button:hover{
+                background-color: white;
+                color: black;
+                cursor: pointer;
+            }
+            #resultaat{
+                width: 15.7em;
+                background-color: white;
+                height: 1.5em;
+                margin-top: 0.5em;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div id="border"><br>
+           
+        Bedrag per stuk: <input id="bedrag" type="number" placeholder="100"><br><br>
+        Aantal: <input id="aantal" type="number" placeholder="10"><br><br>
+        <button onclick="totaalbedrag()">Bereken</button>
+        <div id="resultaat"></div>
+        
+        </div>
+      
+        <script>
+           
+            function totaalbedrag() {
+             var bedrag = document.getElementById('bedrag').value;
+             var aantal = document.getElementById('aantal').value;
+            
+                document.getElementById('resultaat').innerHTML= "Het totaalbedrag is: " +bedrag * aantal;
+            }
+        </script>
+    </body>
+</html>
